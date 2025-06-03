@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309b52abe8a3d7245a133e5236865882, type: 3}
+  m_Name: Weapon_Data_Pistol
+  m_EditorClassIdentifier: 
+  bulletDamage: 35
+  weaponName: SimplePistol
+  weaponType: 0
+  reloadSpeed: 2
+  equipmentSpeed: 2.5
+  gunDistance: 6
+  cameraDistance: 6
+  ammoInMagazine: 8
+  magazineCapacity: 8
+  totalReserveAmmo: 32
+  fireRate: 4
+  shootType: 0
+  bulletPerShot: 1
+  baseSpread: 0.35
+  maxSpread: 3
+  spreadIncreaseRate: 0.35
+  burstAvalible: 1
+  burstActive: 0
+  burstBulletPerShot: 2
+  burstFireRate: 4
+  burstFireDelay: 0.1
+  weaponIcon: {fileID: 1440921872, guid: 3477fe9a26e0faa42b5a9b5b258229c1, type: 3}
+  weaponInfo: "\u0E23\u0E35\u0E42\u0E2B\u0E25\u0E14\u0E44\u0E14\u0E49\u0E44\u0E27\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E40\u0E1B\u0E47\u0E19\u0E2D\u0E32\u0E27\u0E38\u0E18\u0E2A\u0E33\u0E23\u0E2D\u0E07"
+  currentUpgradeWeapon: 0
+  defaultAmmoInMagazine: 8
+  defaultBulletDamage: 35
+  defaultMagazineCapacity: 8
+  unlockedWeapon: 0

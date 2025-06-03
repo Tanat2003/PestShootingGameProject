@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RiceStemBorerWorm_NoWeapon_AC
+  m_Controller: {fileID: 9100000, guid: 9bb68b6669b9dd04bb569752ae544a6a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2a8fa78557de9484cb4d735e01a82eaa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a895ed83a7ab9ab42a275adc370adab5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cd5a6658fa920604f917ee5721a36e2e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 83dd6bfc76f5c8a4f80a73abeba19a0a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c38093c0132b0854dae398229fba5480, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ae69659f0a285d04494875be99a1dc0d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 36705c6a3b4f26b46a56f8e4cea7bb01, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d9f93b1f7ed7ea45937ac5df7b877fe, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 082d51a2c02d2444a997f4acd532f1ce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 98a0b7442b3879d46a7e44b1bd42056d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 143adaaa5ffed9441ac59e875647d06c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bb9e3c25c04819b4e980ae804770ef55, type: 2}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grasshopper_NoWeapon_AC
+  m_Controller: {fileID: 9100000, guid: 590def64fa7650b4e94a8e8950ab3171, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d99f7549d51844c448010a7b4c8e24c6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0ccd69e6d4ac0f94c81682f5c3151df7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 65e726da6dfad1248a167f72a02c4d6f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a3ff785d21a977743882965f941a13d3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 446f1ed6932ec20489b461986c5d9c10, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 34a6a5bf46fb4a1409618ec2419c1505, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3ab793bfae2cc684689be3c7474a7a31, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 369e77c71147de94f96d2038e05305e0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e2116211eed229d419bdbea2a0288ef3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 07797e5011b0af3449e4021c3966b746, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fd7c8b4af240eaf4eb9b218825786444, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5072fd67f7968594d89b220b0b6231a4, type: 2}

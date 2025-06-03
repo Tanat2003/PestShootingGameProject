@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309b52abe8a3d7245a133e5236865882, type: 3}
+  m_Name: Weapon_Data_Orb
+  m_EditorClassIdentifier: 
+  bulletDamage: 3
+  weaponName: Tool
+  weaponType: 5
+  reloadSpeed: 2
+  equipmentSpeed: 2.52
+  gunDistance: 7.22
+  cameraDistance: 6
+  ammoInMagazine: 1000
+  magazineCapacity: 1000
+  totalReserveAmmo: 1000
+  fireRate: 100
+  shootType: 1
+  bulletPerShot: 2
+  baseSpread: 1
+  maxSpread: 5
+  spreadIncreaseRate: 0.25
+  burstAvalible: 1
+  burstActive: 0
+  burstBulletPerShot: 5
+  burstFireRate: 100
+  burstFireDelay: 0.5
+  weaponIcon: {fileID: 21300000, guid: aec048775e355a640a20f3241d4339e3, type: 3}
+  weaponInfo: "\u0E2B\u0E38\u0E48\u0E19\u0E22\u0E19\u0E15\u0E4C\u0E15\u0E31\u0E27\u0E19\u0E35\u0E49\u0E19\u0E2D\u0E01\u0E08\u0E32\u0E01\u0E08\u0E30\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E22\u0E34\u0E07\u0E1B\u0E37\u0E19\u0E44\u0E14\u0E49\u0E23\u0E31\u0E27\u0E41\u0E25\u0E49\u0E27
+    \u0E22\u0E31\u0E07\u0E0B\u0E48\u0E2D\u0E21\u0E23\u0E16\u0E17\u0E35\u0E48\u0E1E\u0E31\u0E07\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E14\u0E49\u0E27\u0E22"
+  currentUpgradeWeapon: 0
+  defaultAmmoInMagazine: 1000
+  defaultBulletDamage: 10
+  defaultMagazineCapacity: 1000
+  unlockedWeapon: 0
