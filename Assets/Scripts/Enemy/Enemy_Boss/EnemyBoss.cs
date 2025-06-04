@@ -8,7 +8,7 @@ using UnityEngine;
 
 using static UnityEngine.EventSystems.EventTrigger;
 
-public enum BossWeaponType { FireThrow, Hammer, SummonMagic, Capoeira }
+public enum BossWeaponType { FireThrow, Hammer, SummonMagic, Capoeira, AxeThrowMagic }
 public class EnemyBoss : Enemy
 {
     public IdleState_Boss idleStateBoss { get; private set; }
@@ -58,6 +58,13 @@ public class EnemyBoss : Enemy
     [SerializeField] private ParticleSystem healingFX;
     [SerializeField] private float healingDelay;
     [SerializeField] private int healPerDelay;
+
+    [Header("ThrowAxeMagic")]
+    [SerializeField] private float throwFlySpeed;
+    [SerializeField] private float throwTimer;
+    [SerializeField] private int throwDamage;
+    [SerializeField] private GameObject throwPrefab;
+    [SerializeField] private ParticleSystem[] throwStartPoint;
 
     public bool spinActive {  get; private set; }
 
@@ -242,6 +249,18 @@ public class EnemyBoss : Enemy
         }
     }
     
+    public void ActivateAxeThrowMagic()
+    {
+        for (int i = 0; i < throwStartPoint.Length; i++)
+        {
+            throwStartPoint[i].Play();
+            GameObject newItemThrow = Object_Pool.instance.GetObject(throwPrefab, throwStartPoint[i].transform);
+            newItemThrow.transform.position = throwStartPoint[i].transform.position;
+            newItemThrow.GetComponent<EnemyThrow>().
+                EnemyThrowSetup(throwFlySpeed, player, throwTimer, throwDamage);
+        }
+
+    }
     public void SetAbilityCooldown() => lastTimeUsedAbility = Time.time; //เซ็ทคูล์ดาวหลังเล่นอนิเมชั่นเสร็จ
     public void JumpImpact()
     {

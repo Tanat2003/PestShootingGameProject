@@ -70,6 +70,10 @@ public class AbilityState_Boss : EnemyState
         {
             enemy.ActivateSpinDamageZone(true);
         }
+        if(enemy.bossWeaponType == BossWeaponType.AxeThrowMagic)
+        {
+            enemy.ActivateAxeThrowMagic();
+        }
     }
     public void DisableFlameThrow() //ใช้หยุดสกิลพ่นไฟตอนเข้าสู่สเตจตาย
     {

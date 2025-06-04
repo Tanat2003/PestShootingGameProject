@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public enum Enemy_Name
 {
     GoldenAppleSnail, FiledRat, FiledCrab, Planthopper, RiceStemBorerWorm,
-    RiceWeevil, RiceMoth, FlourBeetle, Bird, GrassHopper,RatKing, RiceStemBorerWormKing
+    RiceWeevil, RiceMoth, FlourBeetle, Bird, GrassHopper,RatKing, RiceStemBorerWormKing,
+    RiceWeevilKing,
 }
 [RequireComponent(typeof(NavMeshAgent))]
 
