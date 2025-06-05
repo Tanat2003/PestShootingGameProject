@@ -59,7 +59,7 @@ public class AbilityState_Boss : EnemyState
         }
         if (enemy.bossWeaponType == BossWeaponType.Hammer)
         {
-            Debug.Log("AbilityHasTrigger");
+           
             enemy.ActivateHammer();
         }
         if (enemy.bossWeaponType == BossWeaponType.SummonMagic)

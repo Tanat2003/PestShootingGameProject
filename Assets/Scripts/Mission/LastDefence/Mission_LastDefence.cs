@@ -28,6 +28,7 @@ public class Mission_LastDefence : Mission
 
     public override void StartMission()
     {
+        base.StartMission();
         LevelGenerator.Instance.DisableUselessEnemy(enemyToEnable);
 
 
@@ -47,7 +48,7 @@ public class Mission_LastDefence : Mission
     }
     public override void UpdateMission()
     {
-
+        base.UpdateMission();
         if (defenceBegan == false)
         {
             return;

@@ -55,8 +55,8 @@ public class GameManager : MonoBehaviour
         TimeManager.instance.SlowMotion(2);
         AudioManager.instance.PlayBGM(11);
         UI.instance.ShowGameOverUI();
-        CameraManager.instance.ChangeCameraDistance(4);
-        
+        CameraManager.instance.ChangeCameraDistance(3);
+        Mission_Manager.instance.currentMission.ResetMissionValue();
     }
     public void GameCompleted()
     {

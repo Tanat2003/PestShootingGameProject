@@ -22,6 +22,7 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] private GameObject missionInfoParent;
     [SerializeField] private TextMeshProUGUI missionText;
     [SerializeField] private TextMeshProUGUI missionDetail;
+    [SerializeField] private TextMeshProUGUI bossCountDownText;
 
 
     [Space]
@@ -95,7 +96,10 @@ public class UI_InGame : MonoBehaviour
         this.missionDetail.text = missionDetails;
 
     }
-    
+    public void UpdateBossWaringInfo(string text)
+    {
+        this.bossCountDownText.text = text;
+    }
     public void UpdateWeaponUI(List<Weapon> weaponSlots, Weapon currentWeapon)
     {
         for (int i = 0; i < weaponSlotsUI.Length; i++) //ÍÑ¾à´ÁÍÒÇØ¸·Õèãªé
@@ -263,9 +267,6 @@ public class UI_InGame : MonoBehaviour
             }
         }
 
-
-
-
         foreach (var enemy in filteredList)
         {
 
@@ -309,7 +310,7 @@ public class UI_InGame : MonoBehaviour
         enemyInfoPanel.SetActive(false);
         CameraManager.instance.ChangeCameraTarget(GameManager.instance.player.gameObject.transform,6);
         ConTrolManager.instance.SwitchToCharacterControls();
-
+        Mission_Manager.instance.startMission = true;
     }
     
     

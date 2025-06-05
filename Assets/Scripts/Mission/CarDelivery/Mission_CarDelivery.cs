@@ -10,6 +10,7 @@ public class Mission_CarDelivery : Mission
     private bool carDelivered;
     public override void StartMission()
     {
+        base.StartMission();
         if (GameManager.instance.playerIsInTurtorial == true)
         {
             SetMissionDetail();
@@ -72,8 +73,12 @@ public class Mission_CarDelivery : Mission
         GameManager.instance.GameCompleted();
     }
 
+    public override void UpdateMission()
+    {
+        base.UpdateMission();
+    }
     public override void ResetMissionValue()
     {
-        
+        base.ResetMissionValue();
     }
 }

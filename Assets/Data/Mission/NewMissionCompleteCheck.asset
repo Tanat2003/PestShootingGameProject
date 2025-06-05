@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92f9996479de77448ef42fbb0dcb2ab, type: 3}
   m_Name: NewMissionCompleteCheck
   m_EditorClassIdentifier: 
-  missionCompleted: 0000000000
+  missionCompleted: 0101010101

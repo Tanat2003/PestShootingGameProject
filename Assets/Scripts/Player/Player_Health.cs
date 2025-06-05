@@ -56,6 +56,7 @@ public class Player_Health : HealthController
         player.animator.enabled = false;
         player.ragdoll.RagdollActive(true);
 
+        
         GameManager.instance.GameOver();
     }
 

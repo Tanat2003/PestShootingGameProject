@@ -88,7 +88,7 @@ public class EnemyBoss : Enemy
 
     [Space]
     [SerializeField] private LayerMask whatToIgnore;
-
+    
     protected override void Awake()
     {
         base.Awake();
@@ -107,7 +107,7 @@ public class EnemyBoss : Enemy
     {
         base.Start();
         stateMachine.Initialize(idleStateBoss);
-
+        
 
     }
     protected override void Update()
@@ -141,6 +141,7 @@ public class EnemyBoss : Enemy
 
         }
     }
+   
     public bool CanDoAbility()
     {
         bool playerWithInDistance =

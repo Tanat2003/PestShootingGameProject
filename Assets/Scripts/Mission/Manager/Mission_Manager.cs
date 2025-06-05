@@ -7,7 +7,7 @@ public class Mission_Manager : MonoBehaviour
     public static Mission_Manager instance;
     
     public Mission currentMission;//CloneของScriptableตัวจริง เพื่อให้รีเซ็ทค่าบางตัวข้ามซีน
-    
+    public bool startMission = false;
 
 
 

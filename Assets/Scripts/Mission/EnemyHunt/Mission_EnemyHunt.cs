@@ -14,6 +14,7 @@ public class Mission_EnemyHunt : Mission
 
     public override void StartMission()
     {
+        base.StartMission();
         LevelGenerator.Instance.DisableUselessEnemy(enemyToEnable);
         
 
@@ -99,5 +100,8 @@ public class Mission_EnemyHunt : Mission
         string missionDetail = "ศัตรูพืชที่เหลือ : " + targetToKillLeft;
         UI.instance.uiInGame.UpdateMissionInfo(missionText, missionDetail);
     }
-
+    public override void UpdateMission()
+    {
+        base.UpdateMission();
+    }
 }
