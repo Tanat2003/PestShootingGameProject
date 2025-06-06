@@ -44,7 +44,7 @@ public class UI_MissionSelectButton : UI_Button
         Mission_Manager.instance.SelectMission(myMission);
         UI.instance.uiInGame.SetDialog
             (Mission_Manager.instance.currentMission.dialogOwner,
-            Mission_Manager.instance.currentMission.dialogPlayer);
+            Mission_Manager.instance.currentMission.dialogPlayerWithOwner);
             
 
     }

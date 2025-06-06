@@ -9,15 +9,17 @@ public class UI_InGame : MonoBehaviour
 {
     [SerializeField] private GameObject characterUI;
     [SerializeField] private GameObject carUI;
+
     [Header("Health")]
     [SerializeField] private Image healthBar;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Image damageScreenEffect;
 
-
+    [Space]
     [Header("WeaponSlot")]
     [SerializeField] private UI_WeaponSlot[] weaponSlotsUI;
 
+    [Space]
     [Header("Missions")]
     [SerializeField] private GameObject missionInfoParent;
     [SerializeField] private TextMeshProUGUI missionText;
@@ -28,18 +30,29 @@ public class UI_InGame : MonoBehaviour
     [Space]
     [Header("Dialog")]
     [SerializeField] private TextMeshProUGUI dialogTextOwn;
-    [SerializeField] private TextMeshProUGUI dialogTextPlr;
+    [SerializeField] private TextMeshProUGUI dialogTextPlrWithOwn;
     [SerializeField] private Image ownerIcon;
     [SerializeField] private Image plrIcon;
     [SerializeField] private Image dialogTextBox;
     public string[] dialogOwn;
-    public string[] dialogPlr;
+    public string[] dialogPlrWithOwn;
 
+    [Header("BossDialog")]
+    [SerializeField] private TextMeshProUGUI dialogTextBoss;
+    [SerializeField] private TextMeshProUGUI dialogTextPlrWithBoss;
+    [SerializeField] private UI_BossIconHolder bossIconHolder;
+    private Image bossIcon;
+       
+    public string[] dialogBoss;
+    public string[] dialogPlrWithBoss;
+
+    [Space]
     [Header("EnemyInfo")]
     [SerializeField] private TextMeshProUGUI enemyName;
     [SerializeField] private TextMeshProUGUI enemyDetail;
     [SerializeField] private GameObject enemyInfoPanel;
 
+    [Space]
     [Header("OrbInfo")]
     [SerializeField] private GameObject orbInfoPanel;
     [SerializeField] private TextMeshProUGUI orbInfoText;
@@ -76,9 +89,10 @@ public class UI_InGame : MonoBehaviour
     }
     private void OnEnable()
     {
-       
+      
         if (candoCoroutine == false)
             return;
+        bossIcon = bossIconHolder.GetBossIcon();
         displayRoutine = StartCoroutine(StartDialogueWithDelay());
     }
     
@@ -149,12 +163,12 @@ public class UI_InGame : MonoBehaviour
     }
    
     public void UpdateSpeedText(string text) => carSpeedText.text = text;
-    #region Dialogue Method
+    #region OwnerDialogue Method
     public void SetDialog(string[] dialogforown, string[] dialogforplr)
     {
 
-        dialogPlr = dialogforplr;
         dialogOwn = dialogforown;
+        dialogPlrWithOwn = dialogforplr;
 
     }
     private IEnumerator ShowDialogue()
@@ -169,7 +183,7 @@ public class UI_InGame : MonoBehaviour
         plrIcon.gameObject.SetActive(true);
         try
         {
-            for (int i = 0; i < Mathf.Min(dialogOwn.Length, dialogPlr.Length); i++)
+            for (int i = 0; i < Mathf.Min(dialogOwn.Length, dialogPlrWithOwn.Length); i++)
             {
                 // áÊ´§º·¾Ù´¢Í§ Owner
                 AudioManager.instance.PlayOwnerSpeakSound();
@@ -178,7 +192,7 @@ public class UI_InGame : MonoBehaviour
 
                 // áÊ´§º·¾Ù´¢Í§ Player
                 AudioManager.instance.PlayPlrSpeakSound();
-                SetDialogueUI(plrIcon, ownerIcon, "", dialogPlr[i], .35f);
+                SetDialogueUI(plrIcon, ownerIcon, "", dialogPlrWithOwn[i], .35f);
                 yield return WaitForInputOrTime(displayTime);
 
                 
@@ -218,13 +232,13 @@ public class UI_InGame : MonoBehaviour
 
 
         dialogTextOwn.text = ownText;
-        dialogTextPlr.text = plrText;
+        dialogTextPlrWithOwn.text = plrText;
     }
     public void StopDialogue()
     {
 
         isDisplaying = false;
-        dialogTextPlr.text = "";
+        dialogTextPlrWithOwn.text = "";
         dialogTextOwn.text = "";
 
 
@@ -246,6 +260,93 @@ public class UI_InGame : MonoBehaviour
 
     }
     #endregion
+
+    #region BossDialogue Method
+    public void SetBossDialog(string[] dialogforboss, string[] dialogforplr)
+    {
+
+        dialogPlrWithBoss = dialogforplr;
+        dialogBoss = dialogforboss;
+
+    }
+    private IEnumerator ShowBossDialogue()
+    {
+        AudioManager.instance.PlayBGM(0);
+        
+        TimeManager.instance.PauseTime();
+        ConTrolManager.instance.SwtichToUIControls();
+        dialogTextBox.gameObject.SetActive(true);
+        bossIcon.gameObject.SetActive(true);
+        plrIcon.gameObject.SetActive(true);
+        try
+        {
+            for (int i = 0; i < Mathf.Min(dialogBoss.Length, dialogPlrWithBoss.Length); i++)
+            {
+                // áÊ´§º·¾Ù´¢Í§ boss
+                AudioManager.instance.PlayOwnerSpeakSound();
+                SetDialogueUI(bossIcon, plrIcon, dialogBoss[i], "");
+                yield return WaitForInputOrTime(displayTime);
+
+                // áÊ´§º·¾Ù´¢Í§ Player
+                AudioManager.instance.PlayPlrSpeakSound();
+                SetDialogueUI(plrIcon,bossIcon, "", dialogPlrWithBoss[i], .35f);
+                yield return WaitForInputOrTime(displayTime);
+
+
+            }
+        }
+        finally
+        {
+            StopBossDialogue();
+        }
+
+    }
+   
+    public void StartBossDialogueWithDelay()
+    {
+       displayRoutine= StartCoroutine(ShowBossDialogue());
+        
+    }
+    private void SetBossDialogueUI(Image activeIcon, Image inactiveIcon, string ownText, string plrText, float aAlpha = .5f)
+    {
+
+        activeIcon.color = Color.white;
+        inactiveIcon.color = new Color(1, 1, 1, aAlpha); // à»ÅÕèÂ¹¤ÇÒÁâ»Ãè§ãÊ
+
+
+
+        dialogTextBoss.text = ownText;
+        dialogTextPlrWithBoss.text = plrText;
+    }
+    public void StopBossDialogue()
+    {
+
+        isDisplaying = false;
+        dialogTextPlrWithBoss.text = "";
+        dialogTextBoss.text = "";
+
+
+        bossIcon.gameObject.SetActive(false);
+        plrIcon.gameObject.SetActive(false);
+        dialogTextBox.gameObject.SetActive(false);
+
+        TimeManager.instance.ResumeTime();
+        ConTrolManager.instance.SwitchToCharacterControls();
+        CameraManager.instance.ChangeCameraTarget(GameManager.instance.player.transform);
+        if (displayRoutine != null)
+        {
+            StopCoroutine(displayRoutine);
+            displayRoutine = null;
+        }
+        
+
+        
+
+
+    }
+    #endregion
+
+
     private IEnumerator ShowEnemyInfoForhMission()
     {
         
@@ -326,6 +427,14 @@ public class UI_InGame : MonoBehaviour
         yield return new WaitForSeconds(4);
         orbInfoPanel.SetActive(false);
     }
+    private IEnumerator DisplayDamageScreenCo(float timeToDisplay)
+    {
+        damageScreenEffect.gameObject.SetActive(true);
+        yield return new WaitForSeconds(timeToDisplay);
+        damageScreenEffect.gameObject.SetActive(false);
+
+    }
+    
     public bool canPauseGame()
     {
         bool canPauseGame = this.gameObject.activeSelf;
@@ -339,13 +448,6 @@ public class UI_InGame : MonoBehaviour
     public void DisplayDamageScreen(float timeToDisplay)
     {
         displayRoutine = StartCoroutine(DisplayDamageScreenCo(timeToDisplay));
-    }
-    private IEnumerator DisplayDamageScreenCo(float timeToDisplay)
-    {
-        damageScreenEffect.gameObject.SetActive(true);
-        yield return new WaitForSeconds(timeToDisplay);
-        damageScreenEffect.gameObject.SetActive(false);
-
     }
 
 

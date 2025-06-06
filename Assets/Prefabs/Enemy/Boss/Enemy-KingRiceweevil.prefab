@@ -52013,7 +52013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6326824775016197354}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9999948, z: -0, w: 0.0032137595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 62.95, y: 0, z: 32.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -52024,7 +52024,7 @@ Transform:
   - {fileID: 8021098483301804257}
   - {fileID: 2587527886866833614}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -179.632, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &191316691781964102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52101,7 +52101,7 @@ MonoBehaviour:
   enemyName: 12
   enemyDetail: "\u0E21\u0E2D\u0E14\u0E41\u0E1B\u0E49\u0E07\u0E1C\u0E39\u0E49\u0E1A\u0E23\u0E23\u0E25\u0E38\u0E28\u0E32\u0E2A\u0E15\u0E23\u0E4C\u0E40\u0E27\u0E17\u0E22\u0E4C\u0E21\u0E19\u0E15\u0E23\u0E4C"
   idleTime: 5.5
-  agressionRange: 6.34
+  agressionRange: 15
   moveSpeed: 2.63
   chaseSpeed: 4.01
   partrolPoints:

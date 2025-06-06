@@ -130246,14 +130246,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.4333334
+  - time: 3.1333334
     functionName: FinishedMeleeAttackCheck
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 4.6666665
+  - time: 3.9666667
     functionName: AnimationTrigger
     data: 
     objectReferenceParameter: {fileID: 0}

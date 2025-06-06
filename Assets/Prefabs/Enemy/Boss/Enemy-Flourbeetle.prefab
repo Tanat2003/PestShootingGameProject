@@ -11372,7 +11372,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.5221894, y: 2.5, z: 3.143491}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4317964122580508539}
@@ -16946,7 +16946,7 @@ Transform:
   m_GameObject: {fileID: 7470533310331940678}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.08, y: 0, z: -1.17}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17021,7 +17021,7 @@ MonoBehaviour:
     \u0E25\u0E14\u0E04\u0E38\u0E13\u0E20\u0E32\u0E1E\u0E02\u0E2D\u0E07\u0E40\u0E21\u0E25\u0E47\u0E14\u0E02\u0E49\u0E32\u0E27
     \u0E43\u0E19\u0E04\u0E25\u0E31\u0E07\u0E40\u0E01\u0E47\u0E1A"
   idleTime: 5
-  agressionRange: 5
+  agressionRange: 15
   moveSpeed: 2.55
   chaseSpeed: 4
   partrolPoints:
@@ -17055,6 +17055,11 @@ MonoBehaviour:
   healingFX: {fileID: 0}
   healingDelay: 0
   healPerDelay: 0
+  throwFlySpeed: 0
+  throwTimer: 0
+  throwDamage: 0
+  throwPrefab: {fileID: 0}
+  throwStartPoint: []
   travelTimeToTarget: 1
   jumpAttackCooldown: 3
   jumpAttackDamage: 50

@@ -1,17 +1,23 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Mission : ScriptableObject //Abstracr class ‡√“ “¡“√∂ √È“ßAbstractMethod‰¥È
 {
     public string missionName;
-
-    [Header("Dialog")]
+    [Header("MissionDetail")]
     [TextArea]
     public string missionDescription;
     [TextArea]
     public string missionCompleteDescription;
-    public string[] dialogPlayer;
+    [Space]
+    [Header("OwnerDialog")]
     public string[] dialogOwner;
+    public string[] dialogPlayerWithOwner;
+    [Header("BossDialog")]
+    public string[] dialogBoss;
+    public string[] dialogPlayerWithBoss;
+   
     [Space]
 
     [Header("Enemy To Enable")]
@@ -59,12 +65,33 @@ public abstract class Mission : ScriptableObject //Abstracr class ‡√“ “¡“√∂ √È“ß
         {
             bossSpawned = true;
             timeToSpawnBoss = timeTospawnDefault;
-            Object_Pool.instance.
-                GetObject(bossToSpawn, GameManager.instance
-                .player.GetComponentInChildren<BossSpawnPoint>().transform);
-            UI.instance.uiInGame.UpdateBossWaringInfo(null);
+            SpawnBoss();
         }
+
+    }
+
+    private void SpawnBoss()
+    {
+        GameObject boss = Object_Pool.instance.GetObject(bossToSpawn, GameManager.instance.
+            player.GetComponentInChildren<BossSpawnPoint>().GetClearSpawnPoint());
+        boss.transform.parent = null;
+
+
+        UI.instance.uiInGame.UpdateBossWaringInfo(null);
+        StartBossDialogue(boss);
+    }
+
+    private void StartBossDialogue(GameObject boss)
+    {
         
+        CameraManager.instance.ChangeCameraTarget(boss.transform);
+        
+        UI.instance.uiInGame.SetBossDialog
+            (Mission_Manager.instance.currentMission.dialogBoss,
+            Mission_Manager.instance.currentMission.dialogPlayerWithBoss);
+
+        
+        UI.instance.uiInGame.StartBossDialogueWithDelay();
     }
 
     private void UpdateBossWaringText()
