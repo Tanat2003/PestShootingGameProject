@@ -70,6 +70,8 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
 
     }
 
+
+    #region BossSpawn and BossDialogue Method
     private void SpawnBoss()
     {
         GameObject boss = Object_Pool.instance.GetObject(bossToSpawn, GameManager.instance.
@@ -80,29 +82,31 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
         UI.instance.uiInGame.UpdateBossWaringInfo(null);
         StartBossDialogue(boss);
     }
-
     private void StartBossDialogue(GameObject boss)
     {
         
         CameraManager.instance.ChangeCameraTarget(boss.transform);
         
-        UI.instance.uiInGame.SetBossDialog
+        UI.instance.uiInGame.SetDialog
             (Mission_Manager.instance.currentMission.dialogBoss,
-            Mission_Manager.instance.currentMission.dialogPlayerWithBoss);
+            Mission_Manager.instance.currentMission.dialogPlayerWithBoss,DialogueWith.Boss);
 
         
-        UI.instance.uiInGame.StartBossDialogueWithDelay();
+        UI.instance.uiInGame.StartDialogueWithoutDelay();
     }
-
     private void UpdateBossWaringText()
     {
         bossTimertext = System.TimeSpan.FromSeconds(timeToSpawnBoss).ToString("mm' :  'ss");
         string textToShow = "โปรดระวังบอสใน  " + bossTimertext;
         UI.instance.uiInGame.UpdateBossWaringInfo(textToShow);
     }
-
     private bool ShouldCountDownBossSpawn() => bossToSpawn != null && timeToSpawnBoss > 0 && !bossSpawned && Mission_Manager.instance.startMission == true && GameManager.instance.player.health.currentHealth > 1;
     private bool ShouldSpawnBoss() => timeToSpawnBoss <= 0 && bossToSpawn != null;
+
+    #endregion
+
+
+
 
 }
 

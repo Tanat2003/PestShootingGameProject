@@ -122,42 +122,8 @@ public class EnemyBoss : Enemy
         MeleeAttackCheck(damagePoints, attackRadius, meleeAttackFX,meleeAttackDamage);
 
     }
-    public override void EnterBattleMode()
-    {
-        if (inBattleMode)
-        {
-            return;
-        }
-        base.EnterBattleMode();
-        stateMachine.ChangeState(moveStateBoss);
-    }
 
-    public override void Die()
-    {
-        base.Die();
-        if (stateMachine.currentState != deadState)
-        {
-            stateMachine.ChangeState(deadState);
-
-        }
-    }
-   
-    public bool CanDoAbility()
-    {
-        bool playerWithInDistance =
-            Vector3.Distance(transform.position, player.position) < minAbilityDistance;
-        if (playerWithInDistance == flameThrow)
-        {
-            return false;
-        }
-
-        if (Time.time > lastTimeUsedAbility + abilityCooldown)
-        {
-
-            return true;
-        }
-        return false;
-    }
+    #region SkillMethod
     public void ActivateFlameThrow(bool activate)
     {
         flameThrowActive = activate;
@@ -177,30 +143,12 @@ public class EnemyBoss : Enemy
         flameThrow.Clear();
         flameThrow.Play();
     }
-    public void ShouldDoAbility()
+    public void ActivateHammer()
     {
-        if (CanDoAbility())
-        {
-            if (bossWeaponType == BossWeaponType.Capoeira)
-            {
-                if (health.currentHealth <= health.minHealthToHealth)
-                {
-                    stateMachine.ChangeState(abilityState);
-                }
-            }
-            else
-            {
-                    stateMachine.ChangeState(abilityState);
-
-            }
-
-        }
-            
-
-
-         
+        GameObject newActivation = Object_Pool.instance.GetObject(hammerFxPrefab, impactPoint);
+        Object_Pool.instance.ReturnObject(newActivation, 1);
+        MassDamage(damagePoints[0].position, hammerCheckRadius,hammerActiveDamage);
     }
-    #region CapeoriaSkill
     public void ActivateSpinDamageZone(bool activate)
     {
         spinActive = activate;
@@ -218,7 +166,6 @@ public class EnemyBoss : Enemy
         healingFX.Play();
         StartCoroutine(BossIsRecoveryHP(spinDuration,healingDelay));
     }
-
     private IEnumerator BossIsRecoveryHP(float duration,float delay)
     {
         float time = 0;
@@ -233,14 +180,6 @@ public class EnemyBoss : Enemy
         }
         
     }
-
-    #endregion
-    public void ActivateHammer()
-    {
-        GameObject newActivation = Object_Pool.instance.GetObject(hammerFxPrefab, impactPoint);
-        Object_Pool.instance.ReturnObject(newActivation, 1);
-        MassDamage(damagePoints[0].position, hammerCheckRadius,hammerActiveDamage);
-    }
     public void ActivateSummonMagic()
     {
         summonFX.Play();
@@ -249,7 +188,6 @@ public class EnemyBoss : Enemy
             Object_Pool.instance.GetObject(summonedprefab, partrolPoints[i]);
         }
     }
-    
     public void ActivateAxeThrowMagic()
     {
         for (int i = 0; i < throwStartPoint.Length; i++)
@@ -262,7 +200,11 @@ public class EnemyBoss : Enemy
         }
 
     }
-    public void SetAbilityCooldown() => lastTimeUsedAbility = Time.time; //เซ็ทคูล์ดาวหลังเล่นอนิเมชั่นเสร็จ
+
+    #endregion
+
+
+    #region Jump Attack Method
     public void JumpImpact()
     {
         Transform impactPoint = this.impactPoint;
@@ -294,7 +236,6 @@ public class EnemyBoss : Enemy
         }
 
     }
-
     private void ApplyPhysicalForce(Vector3 impactPoint, float impactRadius, Collider hit)
     {
         //Physic effect
@@ -304,23 +245,7 @@ public class EnemyBoss : Enemy
             rb.AddExplosionForce(impactPower, impactPoint, impactRadius, upwardsMultiplier, ForceMode.Impulse);
         }
     }
-
-    public bool CanDoJumpAttack()
-    {
-        float distanceToplayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToplayer < minJumpDistanceRequired) //ผู้เล่นอยู่ใกล้โดดไม่ไปไม่จำเป็นต้องกระโดด
-        {
-            return false;
-        }
-        if (Time.time > lastTimeJump + jumpAttackCooldown && PlayerInClearSight())
-        {
-
-            return true;
-        }
-        return false;
-    }
     public void SetJumpAttackCooldown() => lastTimeJump = Time.time;
-
     public bool PlayerInClearSight()
     {
         Vector3 enemyPos = transform.position + new Vector3(0, 3.07f, 0); //+บวกด้วยความสูงของบอส
@@ -336,6 +261,83 @@ public class EnemyBoss : Enemy
             }
         }
         return false;
+    }
+
+
+
+    #endregion
+
+
+
+
+    #region CheckSkill&JumpAttack
+    public void ShouldDoAbility()
+    {
+        if (CanDoAbility())
+        {
+            if (bossWeaponType == BossWeaponType.Capoeira)
+            {
+                if (health.currentHealth <= health.minHealthToHealth)
+                {
+                    stateMachine.ChangeState(abilityState);
+                }
+            }
+            else
+            {
+                    stateMachine.ChangeState(abilityState);
+
+            }
+
+        }
+            
+
+
+         
+    }
+    public bool CanDoAbility()
+    {
+        bool playerWithInDistance =
+            Vector3.Distance(transform.position, player.position) < minAbilityDistance;
+        if (playerWithInDistance == flameThrow)
+        {
+            return false;
+        }
+
+        if (Time.time > lastTimeUsedAbility + abilityCooldown)
+        {
+
+            return true;
+        }
+        return false;
+    }
+    public bool CanDoJumpAttack()
+    {
+        float distanceToplayer = Vector3.Distance(transform.position, player.position);
+        if (distanceToplayer < minJumpDistanceRequired) //ผู้เล่นอยู่ใกล้โดดไม่ไปไม่จำเป็นต้องกระโดด
+        {
+            return false;
+        }
+        if (Time.time > lastTimeJump + jumpAttackCooldown && PlayerInClearSight())
+        {
+
+            return true;
+        }
+        return false;
+    }
+    public bool PlayerInAttackRange() => Vector3.Distance(transform.position, player.position) < attackRange;
+
+    #endregion
+    
+
+    #region OtherOverrideMethod
+    public override void EnterBattleMode()
+    {
+        if (inBattleMode)
+        {
+            return;
+        }
+        base.EnterBattleMode();
+        stateMachine.ChangeState(moveStateBoss);
     }
     public override void GetHit(int damage)
     {
@@ -363,7 +365,15 @@ public class EnemyBoss : Enemy
 
         ShouldDoAbility();
     }
-    public bool PlayerInAttackRange() => Vector3.Distance(transform.position, player.position) < attackRange;
+    public override void Die()
+    {
+        base.Die();
+        if (stateMachine.currentState != deadState)
+        {
+            stateMachine.ChangeState(deadState);
+
+        }
+    }
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
@@ -391,5 +401,8 @@ public class EnemyBoss : Enemy
         }
 
     }
+
+    #endregion
+    public void SetAbilityCooldown() => lastTimeUsedAbility = Time.time; //เซ็ทคูล์ดาวหลังเล่นอนิเมชั่นเสร็จ
 
 }

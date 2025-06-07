@@ -82,10 +82,6 @@ public class Enemy : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Transform>();
         //?.transform.Find("player_main");
 
-        
-
-
-
     }
     protected virtual void Start()
     {
