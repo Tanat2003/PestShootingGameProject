@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้างAbstractMethodได้
 {
@@ -17,7 +16,7 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
     [Header("BossDialog")]
     public string[] dialogBoss;
     public string[] dialogPlayerWithBoss;
-   
+
     [Space]
 
     [Header("Enemy To Enable")]
@@ -26,6 +25,7 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
     public GameObject bossToSpawn;
     public float timeToSpawnBoss;
     public bool bossSpawned = false;
+    [SerializeField] private bool canSpawnBoss;
     private string bossTimertext;
 
 
@@ -44,6 +44,7 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
     public virtual void StartMission()
     {
         timeTospawnDefault = timeToSpawnBoss;
+        
 
     }
     public abstract bool MissionCompleted();
@@ -56,12 +57,12 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
     public virtual void UpdateMission()
     {
 
-        if(ShouldCountDownBossSpawn())
+        if (ShouldCountDownBossSpawn())
         {
             timeToSpawnBoss -= Time.deltaTime;
             UpdateBossWaringText();
         }
-        else if(ShouldSpawnBoss())
+        else if (ShouldSpawnBoss())
         {
             bossSpawned = true;
             timeToSpawnBoss = timeTospawnDefault;
@@ -74,25 +75,35 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
     #region BossSpawn and BossDialogue Method
     private void SpawnBoss()
     {
+        
+
+
         GameObject boss = Object_Pool.instance.GetObject(bossToSpawn, GameManager.instance.
             player.GetComponentInChildren<BossSpawnPoint>().GetClearSpawnPoint());
         boss.transform.parent = null;
 
 
-        UI.instance.uiInGame.UpdateBossWaringInfo(null);
+        UI.instance.uiInGame.UpdateBossWaringInfo("ห้ามประมาทเชียวนะ !");
+
+        CameraManager.instance.ChangeCameraTarget(boss.transform);
+
+        
+
+
+        
+        
         StartBossDialogue(boss);
     }
     private void StartBossDialogue(GameObject boss)
     {
         
+
         CameraManager.instance.ChangeCameraTarget(boss.transform);
-        
-        UI.instance.uiInGame.SetDialog
-            (Mission_Manager.instance.currentMission.dialogBoss,
-            Mission_Manager.instance.currentMission.dialogPlayerWithBoss,DialogueWith.Boss);
 
         
-        UI.instance.uiInGame.StartDialogueWithoutDelay();
+
+
+        UI.instance.uiInGame.StartDialogueWithDelay(.2f);
     }
     private void UpdateBossWaringText()
     {
@@ -100,8 +111,8 @@ public abstract class Mission : ScriptableObject //Abstracr class เราสามารถสร้าง
         string textToShow = "โปรดระวังบอสใน  " + bossTimertext;
         UI.instance.uiInGame.UpdateBossWaringInfo(textToShow);
     }
-    private bool ShouldCountDownBossSpawn() => bossToSpawn != null && timeToSpawnBoss > 0 && !bossSpawned && Mission_Manager.instance.startMission == true && GameManager.instance.player.health.currentHealth > 1;
-    private bool ShouldSpawnBoss() => timeToSpawnBoss <= 0 && bossToSpawn != null;
+    private bool ShouldCountDownBossSpawn() => bossToSpawn != null &&  canSpawnBoss &&timeToSpawnBoss != 0 && timeToSpawnBoss > 0 && !bossSpawned && Mission_Manager.instance.startMission == true && GameManager.instance.player.health.currentHealth > 1;
+    private bool ShouldSpawnBoss() => canSpawnBoss &&timeToSpawnBoss <= 0 && bossToSpawn != null;
 
     #endregion
 

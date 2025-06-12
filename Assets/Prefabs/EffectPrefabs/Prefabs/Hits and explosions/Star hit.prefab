@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 456162134121283156}
   - component: {fileID: 6765239461773565037}
   - component: {fileID: 7429146656636883265}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4898,7 +4898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8842736693468906719}
   - component: {fileID: 1532832011831538130}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Melee_Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,7 +5027,7 @@ GameObject:
   - component: {fileID: 2875609357165739375}
   - component: {fileID: 2183654512933933930}
   - component: {fileID: 6198657176310092093}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9925,7 +9925,7 @@ GameObject:
   - component: {fileID: 2319384772025575332}
   - component: {fileID: 6299362341641363023}
   - component: {fileID: 5069520466395564201}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Star hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14842,7 +14842,7 @@ GameObject:
   - component: {fileID: 6871533506224884221}
   - component: {fileID: 6325133482252963583}
   - component: {fileID: 4735727726380896768}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

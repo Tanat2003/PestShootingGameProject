@@ -12,9 +12,10 @@ public class UI_BossIconHolder : MonoBehaviour
     {
         for (int i = 0; i < allBossIcon.Length; i++)
         {
-            if (allBossIcon[i].GetComponent<UI_BossIcon>().bossName == 
-                Mission_Manager.instance.currentMission.bossToSpawn.GetComponent<Enemy>().enemyName)
+            if (allBossIcon[i].GetComponent<UI_BossIcon>().bossName ==
+               Mission_Manager.instance.currentMission.bossToSpawn.GetComponent<Enemy>().enemyName)
             {
+                
                 return allBossIcon[i];
             }
         }

@@ -40,7 +40,8 @@ MonoBehaviour:
   dialogBoss: []
   dialogPlayerWithBoss: []
   enemyToEnable: 
-  bossToSpawn: {fileID: 0}
+  bossToSpawn: {fileID: 7470533310331940678, guid: e053fc7cbc7b6a5448b18bc6edfe335d, type: 3}
   timeToSpawnBoss: 0
   bossSpawned: 0
+  canSpawnBoss: 0
   skyBoxMaterial: {fileID: 2100000, guid: efd1c33efd2d58340b88804268e6833f, type: 2}

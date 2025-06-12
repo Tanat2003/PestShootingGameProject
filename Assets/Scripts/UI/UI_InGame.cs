@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public enum DialogueWith
 {
-    Owner, Boss
+    Owner, Boss,
 }
 public class UI_InGame : MonoBehaviour
 {
@@ -65,10 +65,8 @@ public class UI_InGame : MonoBehaviour
 
 
     private int currentEnemyIndex;
-    private bool isDisplaying = true;
-    private Coroutine displayRoutine;
 
-    public bool candoCoroutine;
+    private Coroutine displayRoutine;
 
 
     private float displayTime = 5f;
@@ -95,10 +93,9 @@ public class UI_InGame : MonoBehaviour
     private void OnEnable()
     {
 
-        if (candoCoroutine == false)
-            return;
+
         bossIcon = bossIconHolder.GetBossIcon();
-        displayRoutine = StartCoroutine(StartDialogueWithDelay());
+        displayRoutine = StartCoroutine(ShowDialogue(1f));
     }
 
 
@@ -120,7 +117,7 @@ public class UI_InGame : MonoBehaviour
     {
 
         enemyInfoPanel.SetActive(true);
-        isDisplaying = true;
+
         currentEnemyIndex = 0;
         ConTrolManager.instance.SwtichToUIControls();
         List<Enemy> allenemys = LevelGenerator.Instance.GetEnemyList();
@@ -172,13 +169,17 @@ public class UI_InGame : MonoBehaviour
             StopCoroutine(displayRoutine);
             displayRoutine = null;
         }
-        candoCoroutine = false;
+
         GameManager.instance.player.GetComponent<Player_WeaponController>().ShowWeaponUpgradeFX();
-        isDisplaying = false;
+
         enemyInfoPanel.SetActive(false);
         CameraManager.instance.ChangeCameraTarget(GameManager.instance.player.gameObject.transform, 6);
         ConTrolManager.instance.SwitchToCharacterControls();
         Mission_Manager.instance.startMission = true;
+
+        SetDialog
+            (Mission_Manager.instance.currentMission.dialogBoss,
+                Mission_Manager.instance.currentMission.dialogPlayerWithBoss, DialogueWith.Boss);
     }
 
 
@@ -208,25 +209,39 @@ public class UI_InGame : MonoBehaviour
     #region OwnerDialogue Method
     public void SetDialog(string[] dialogForOther, string[] dialogForPlr, DialogueWith dialogWith)
     {
-        if (dialogWith == DialogueWith.Owner)
-        {
-            dialogOwn = dialogForOther;
-            dialogPlrWithOwn = dialogForPlr;
 
-        }else if(dialogWith != DialogueWith.Boss)
+        
+        switch (dialogWith)
         {
-            dialogBoss = dialogForOther;
-            dialogPlrWithBoss = dialogForPlr;
+            case DialogueWith.Owner:
+                dialogOwn = dialogForOther;
+                dialogPlrWithOwn = dialogForPlr;
+                break;
+
+            case DialogueWith.Boss:
+                dialogBoss = dialogForOther;
+                dialogPlrWithBoss = dialogForPlr;
+                break;
+
+               
         }
-
         playerHasDialogWith = dialogWith;
 
 
+
+
     }
-    private IEnumerator ShowDialogue()
+    private IEnumerator ShowDialogue(float delay)
     {
-        if(playerHasDialogWith == DialogueWith.Owner)
+        
+
+
+        yield return new WaitForSeconds(delay);
+       
+
+        if (playerHasDialogWith == DialogueWith.Owner)
         {
+            
             AudioManager.instance.PlayBGM(0);
             yield return new WaitForSeconds(2);
             TimeManager.instance.PauseTime();
@@ -256,12 +271,20 @@ public class UI_InGame : MonoBehaviour
                 StopDialogue();
             }
         }
-        
-        if(playerHasDialogWith == DialogueWith.Boss)
+
+        if (playerHasDialogWith == DialogueWith.Boss)
         {
+            
+            
+
+            dialogTextBox.gameObject.SetActive(true);
+            bossIcon.gameObject.SetActive(true);
+            plrIcon.gameObject.SetActive(true);
+
             AudioManager.instance.PlayBGM(0);
 
             TimeManager.instance.PauseTime();
+
             ConTrolManager.instance.SwtichToUIControls();
             dialogTextBox.gameObject.SetActive(true);
             bossIcon.gameObject.SetActive(true);
@@ -270,6 +293,7 @@ public class UI_InGame : MonoBehaviour
             {
                 for (int i = 0; i < Mathf.Min(dialogBoss.Length, dialogPlrWithBoss.Length); i++)
                 {
+                    
                     // แสดงบทพูดของ boss
                     AudioManager.instance.PlayOwnerSpeakSound();
                     SetDialogueUI(bossIcon, plrIcon, dialogBoss[i], "");
@@ -289,7 +313,7 @@ public class UI_InGame : MonoBehaviour
             }
         }
 
-       
+
 
     }
     private IEnumerator WaitForInputOrTime(float delay)
@@ -305,26 +329,28 @@ public class UI_InGame : MonoBehaviour
             yield return null;
         }
     }
-    public IEnumerator StartDialogueWithDelay(float delay = 0)
+    public void StartDialogueWithDelay(float delay = 0)
     {
+        
+        
+        displayRoutine = StartCoroutine(ShowDialogue(delay));
 
-        yield return new WaitForSeconds(delay);
-        displayRoutine = StartCoroutine(ShowDialogue());
+
+
     }
-    public void StartDialogueWithoutDelay()
-    {
-        displayRoutine = StartCoroutine(ShowDialogue());
-    }
+
     private void SetDialogueUI(Image activeIcon, Image inactiveIcon, string otherText, string plrText, float aAlpha = .5f)
     {
-        if(playerHasDialogWith == DialogueWith.Owner)
+
+        if (playerHasDialogWith == DialogueWith.Owner)
         {
             activeIcon.color = Color.white;
             inactiveIcon.color = new Color(1, 1, 1, aAlpha); // เปลี่ยนความโปร่งใส
 
             dialogTextOwn.text = otherText;
             dialogTextPlrWithOwn.text = plrText;
-        }else if(playerHasDialogWith == DialogueWith.Boss)
+        }
+        else if (playerHasDialogWith == DialogueWith.Boss)
         {
             activeIcon.color = Color.white;
             inactiveIcon.color = new Color(1, 1, 1, aAlpha); // เปลี่ยนความโปร่งใส
@@ -334,13 +360,14 @@ public class UI_InGame : MonoBehaviour
             dialogTextBoss.text = otherText;
             dialogTextPlrWithBoss.text = plrText;
         }
-        
+
     }
     public void StopDialogue()
     {
-        if(playerHasDialogWith == DialogueWith.Owner)
+        
+        if (playerHasDialogWith == DialogueWith.Owner)
         {
-            isDisplaying = false;
+
             dialogTextPlrWithOwn.text = "";
             dialogTextOwn.text = "";
 
@@ -358,10 +385,13 @@ public class UI_InGame : MonoBehaviour
                 displayRoutine = null;
             }
 
+
+
             StartCoroutine(StartEnemyShowInfo());
-        }else if(playerHasDialogWith == DialogueWith.Boss)
+        }
+        else if (playerHasDialogWith == DialogueWith.Boss)
         {
-            isDisplaying = false;
+
             dialogTextPlrWithBoss.text = "";
             dialogTextBoss.text = "";
 
@@ -373,10 +403,12 @@ public class UI_InGame : MonoBehaviour
             TimeManager.instance.ResumeTime();
             ConTrolManager.instance.SwitchToCharacterControls();
             CameraManager.instance.ChangeCameraTarget(GameManager.instance.player.transform);
+
             if (displayRoutine != null)
             {
                 StopCoroutine(displayRoutine);
                 displayRoutine = null;
+
             }
 
         }

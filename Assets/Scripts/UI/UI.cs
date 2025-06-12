@@ -147,7 +147,7 @@ public class UI : MonoBehaviour
         GameDataManager.instance.ResetCurrentScore(Mission_Manager.instance.currentMission.missionName);
         StartCoroutine(ChangeImageAlpha(1, 1.5f, null)); //fadeIN
         yield return new WaitForSecondsRealtime(1);
-        uiInGame.candoCoroutine = true;
+        
         SwtichTo(uiInGame.gameObject);
         
         GameManager.instance.GameStart();
