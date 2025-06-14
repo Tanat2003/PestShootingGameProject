@@ -1,4 +1,6 @@
 using Cinemachine;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
@@ -11,6 +13,17 @@ public class CameraManager : MonoBehaviour
     [Header("CameraDistance")]
     [SerializeField] private bool canChangeCameraDistance;
     [SerializeField] private float distanceChangeRate = .5f;
+
+    [Header("VisiblelayerCameraSetting")]
+    public Transform player; // อ้างอิงถึง GameObject ของผู้เล่น
+    public float wallCheckDistance = 5f; // ระยะที่กล้องจะเช็คกำแพง
+    public LayerMask wallLayer; // กำหนด Layer ของกำแพงที่เราต้องการจะซ่อน
+
+    private Camera mainCamera;
+    private int originalCullingMask;
+    private int wallLayerMask;
+
+
 
     private void Awake()
     {
@@ -27,16 +40,58 @@ public class CameraManager : MonoBehaviour
         virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
         transposer = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
 
+        
+
+
+
     }
+    private void Start()
+    {
+        mainCamera = Camera.main;
+        originalCullingMask = mainCamera.cullingMask; // เก็บค่า Culling Mask เดิมของกล้องไว้
+        wallLayerMask = wallLayer.value;
+    }
+
     private void Update()
     {
         UpdateCameraDistance();
+        // ตรวจสอบว่ามีกำแพงอยู่ระหว่างกล้องกับผู้เล่นหรือไม่
 
+        bool wallOccluding = Physics.Raycast
+            (virtualCamera.transform.position, 
+            (player.position - virtualCamera.transform.position).
+            normalized, out RaycastHit hit, wallCheckDistance, wallLayer);
+
+        if (wallOccluding)
+        {
+            // ถ้ามีกำแพงบัง และเป็นกำแพงใน Layer ที่เราต้องการ
+            // ทำให้กำแพงใน Layer นี้ไม่ถูกวาด (โดยการลบ Layer นั้นออกจาก Culling Mask)
+            mainCamera.cullingMask = originalCullingMask & ~wallLayerMask;
+            //mainCamera.cullingMask &= ~(1 << LayerMask.NameToLayer("Enviroment"));
+            
+        }
+        else
+        {
+            // ถ้าไม่มีกำแพงบัง หรือกำแพงที่บังไม่ได้อยู่ใน Layer ที่กำหนด
+            // คืนค่า Culling Mask ของกล้องกลับไป
+            mainCamera.cullingMask = originalCullingMask;
+            
+           
+            
+        }
     }
+
+   
+
+
+
+
+
+
 
     private void UpdateCameraDistance()
     {
-        if (canChangeCameraDistance==false)
+        if (canChangeCameraDistance == false)
         {
             return;
         }
@@ -52,7 +107,7 @@ public class CameraManager : MonoBehaviour
     }
 
 
-    //ฟังชั่นนี้ใช้เซ็ทระยะห่างของกล้อง
+
     public void ChangeCameraDistance(float distance) => targetCameraDistance = distance;
     public void ChangeCameraTarget(Transform target, float manualDistance = 6f, float newLookAheadTime = 0f, bool autoAdjustCamera = false)
     {
@@ -64,14 +119,14 @@ public class CameraManager : MonoBehaviour
         if (autoAdjustCamera == true)
         {
             AdjustCameraByTargetSize(target);
-            
+
         }
         else
         {
             ChangeCameraDistance(manualDistance);
         }
 
-        
+
     }
     private void AdjustCameraByTargetSize(Transform target)
     {
@@ -89,16 +144,17 @@ public class CameraManager : MonoBehaviour
         float distanceMultiplier = .4f;
         float heightMultiplier = 1.2f;
 
-        
-       
 
-       framingTransposer.m_CameraDistance = biggest * distanceMultiplier;
+
+
+        framingTransposer.m_CameraDistance = biggest * distanceMultiplier;
 
         Vector3 trackedOffset = framingTransposer.m_TrackedObjectOffset;
         trackedOffset.y = height * heightMultiplier;
         framingTransposer.m_TrackedObjectOffset = trackedOffset;
     }
 
+    public Transform GetCameraLookAt() => virtualCamera.LookAt;
 
 
 
