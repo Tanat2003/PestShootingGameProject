@@ -55,30 +55,31 @@ public class CameraManager : MonoBehaviour
     private void Update()
     {
         UpdateCameraDistance();
-        // ตรวจสอบว่ามีกำแพงอยู่ระหว่างกล้องกับผู้เล่นหรือไม่
 
-        bool wallOccluding = Physics.Raycast
-            (virtualCamera.transform.position, 
-            (player.position - virtualCamera.transform.position).
-            normalized, out RaycastHit hit, wallCheckDistance, wallLayer);
+        //// ตรวจสอบว่ามีกำแพงอยู่ระหว่างกล้องกับผู้เล่นหรือไม่
 
-        if (wallOccluding)
-        {
-            // ถ้ามีกำแพงบัง และเป็นกำแพงใน Layer ที่เราต้องการ
-            // ทำให้กำแพงใน Layer นี้ไม่ถูกวาด (โดยการลบ Layer นั้นออกจาก Culling Mask)
-            mainCamera.cullingMask = originalCullingMask & ~wallLayerMask;
-            //mainCamera.cullingMask &= ~(1 << LayerMask.NameToLayer("Enviroment"));
+        //bool wallOccluding = Physics.Raycast
+        //    (virtualCamera.transform.position, 
+        //    (player.position - virtualCamera.transform.position).
+        //    normalized, out RaycastHit hit, wallCheckDistance, wallLayer);
+
+        //if (wallOccluding)
+        //{
+        //    // ถ้ามีกำแพงบัง และเป็นกำแพงใน Layer ที่เราต้องการ
+        //    // ทำให้กำแพงใน Layer นี้ไม่ถูกวาด (โดยการลบ Layer นั้นออกจาก Culling Mask)
+        //    mainCamera.cullingMask = originalCullingMask & ~wallLayerMask;
+        //    //mainCamera.cullingMask &= ~(1 << LayerMask.NameToLayer("Enviroment"));
             
-        }
-        else
-        {
-            // ถ้าไม่มีกำแพงบัง หรือกำแพงที่บังไม่ได้อยู่ใน Layer ที่กำหนด
-            // คืนค่า Culling Mask ของกล้องกลับไป
-            mainCamera.cullingMask = originalCullingMask;
+        //}
+        //else
+        //{
+        //    // ถ้าไม่มีกำแพงบัง หรือกำแพงที่บังไม่ได้อยู่ใน Layer ที่กำหนด
+        //    // คืนค่า Culling Mask ของกล้องกลับไป
+        //    mainCamera.cullingMask = originalCullingMask;
             
            
             
-        }
+        //}
     }
 
    

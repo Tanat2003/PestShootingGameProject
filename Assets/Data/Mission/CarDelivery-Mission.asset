@@ -51,4 +51,4 @@ MonoBehaviour:
   timeToSpawnBoss: 472.25113
   bossSpawned: 0
   canSpawnBoss: 1
-  skyBoxMaterial: {fileID: 2100000, guid: 5d133deeaa66ed445853e946ff25e073, type: 2}
+  skyBoxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
