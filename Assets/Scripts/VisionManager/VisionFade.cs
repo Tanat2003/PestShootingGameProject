@@ -4,43 +4,63 @@ using UnityEngine;
 
 public class VisionFade : MonoBehaviour
 {
+    [Header("MatterialForGameScenceObjSetting")]
     [SerializeField] private Material normalMaterial;
     [SerializeField] private Material darkMaterial;
-
-    private SkinnedMeshRenderer skinMeshRenderer;
-    private MeshRenderer meshRenderer;
-
+    [Space]
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private SkinnedMeshRenderer skinMeshRenderer;
+    [SerializeField] private bool IsEnemy;
+   
+    
     private void Start()
     {
-        skinMeshRenderer = GetComponent<SkinnedMeshRenderer>();
-        meshRenderer = GetComponent<MeshRenderer>();
+        
+        
     }
+    
 
     public void SetDark(bool isDark)
     {
-        if (skinMeshRenderer != null)
+       
+        if (skinMeshRenderer != null && !IsEnemy)
         {
-            if (isDark == true)
-            {
-               skinMeshRenderer.material = darkMaterial;
-            }
-            else
-            {
-                skinMeshRenderer.material = normalMaterial;
-            }
-            //skinMeshRenderer.material = isDark ? darkMaterial : normalMaterial;
+
+            skinMeshRenderer.material = isDark ? darkMaterial : normalMaterial;
         }
-        if(meshRenderer != null)
+        if (meshRenderer != null && !IsEnemy)
         {
-            if(isDark == true)
+
+            meshRenderer.material = isDark ? darkMaterial : normalMaterial;
+        }
+        if (IsEnemy)
+        {
+            if (isDark == false)
             {
-                meshRenderer.material =darkMaterial;
-            }
-            else
+                MaterialPropertyBlock mpb = new MaterialPropertyBlock();
+                skinMeshRenderer.GetPropertyBlock(mpb);
+
+                Color c = Color.white;
+                if (skinMeshRenderer.sharedMaterial.HasProperty("_BaseColor"))
+                    c = skinMeshRenderer.sharedMaterial.GetColor("_BaseColor");
+
+                c.a = 1f;
+                mpb.SetColor("_BaseColor", c);
+                skinMeshRenderer.SetPropertyBlock(mpb);
+            }else if(isDark == true)
             {
-                meshRenderer.material = normalMaterial;
+                MaterialPropertyBlock mpb = new MaterialPropertyBlock();
+                skinMeshRenderer.GetPropertyBlock(mpb);
+
+                Color c = Color.white;
+                if (skinMeshRenderer.sharedMaterial.HasProperty("_BaseColor"))
+                    c = skinMeshRenderer.sharedMaterial.GetColor("_BaseColor");
+
+                c.a = 0f;
+                mpb.SetColor("_BaseColor", c);
+                skinMeshRenderer.SetPropertyBlock(mpb);
             }
-            //meshRenderer.material = isDark ? darkMaterial: normalMaterial;
+            
         }
     }
 }
