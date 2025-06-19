@@ -48,7 +48,7 @@ MonoBehaviour:
   - ...
   enemyToEnable: 06000000
   bossToSpawn: {fileID: 7470533310331940678, guid: e053fc7cbc7b6a5448b18bc6edfe335d, type: 3}
-  timeToSpawnBoss: 472.25113
+  timeToSpawnBoss: 290
   bossSpawned: 0
   canSpawnBoss: 1
   skyBoxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}

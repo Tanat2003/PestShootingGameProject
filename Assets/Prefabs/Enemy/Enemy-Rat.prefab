@@ -4509,6 +4509,7 @@ GameObject:
   - component: {fileID: 3419002316211595268}
   - component: {fileID: 1176914253351148620}
   - component: {fileID: 1746584285268656556}
+  - component: {fileID: 9158493001680646936}
   m_Layer: 11
   m_Name: Enemy-Rat
   m_TagString: Untagged
@@ -4549,6 +4550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 150
   currentHealth: 0
+  minHealthToHealth: 0
 --- !u!195 &827934432091511299
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4664,6 +4666,31 @@ MonoBehaviour:
   ragdollParent: {fileID: 645661980012892213}
   ragdollColider: []
   ragdollRigibody: []
+--- !u!114 &9158493001680646936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234426243342403959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7884fcc147a0678499c6d107d0791bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalMaterial: {fileID: 3758952881610933197, guid: 14ec7dbcb148d1e40a42915494249ddd, type: 3}
+  allMeshToFade:
+  - {fileID: 6166942764317252299}
+  - {fileID: 4952716985331406683}
+  - {fileID: 3625012150907953236}
+  - {fileID: 3391378149659998241}
+  - {fileID: 8511518821207533664}
+  allSkinMeshToFade: []
+  normalMaterials: []
+  isEnemy: 1
+  enemyCrystalMaterial: {fileID: 3758952881610933197, guid: 098c2be7430782344a22caa1d8787baa, type: 3}
+  enemySkinnedMesh: {fileID: 3535612012900844470}
+  darkMaterial: {fileID: 2100000, guid: b8435950ab658b34abf7c1326881719f, type: 2}
 --- !u!1 &7494756308994965253
 GameObject:
   m_ObjectHideFlags: 0

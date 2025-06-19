@@ -24,10 +24,10 @@ TagManager:
   - CarVsPlayer
   - Car
   - BossSpawn
-  - ClearView
-  - Wall
-  - BlurredArea
-  - VisionCone
+  - CanbeInvisible
+  - EnemyBoss
+  - 
+  - 
   - 
   - 
   - 

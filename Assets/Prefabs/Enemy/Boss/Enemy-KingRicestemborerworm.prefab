@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7557909872004886205}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1853718120673372290}
   - component: {fileID: 6952269280688264335}
   - component: {fileID: 3383178359762628463}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 6060410919458919600}
   - component: {fileID: 557312723397228735}
   - component: {fileID: 1819597612447162159}
-  m_Layer: 12
+  m_Layer: 20
   m_Name: SpinDamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 7030670904343485844}
   - component: {fileID: 6290875296815622073}
   - component: {fileID: 7973909857749440888}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: leg_3_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 8629515407243200606}
   - component: {fileID: 1925225886429556406}
   - component: {fileID: 3978103980970742270}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6483793935195696525}
   - component: {fileID: 4429556048854960472}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Melee_Swoosh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 4589050792357168564}
   - component: {fileID: 8072016305009729862}
   - component: {fileID: 2450983571210900547}
-  m_Layer: 5
+  m_Layer: 20
   m_Name: HealBar_Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 4535755439982672860}
   - component: {fileID: 4955702135661446154}
   - component: {fileID: 3427160126096195916}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Healing circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5575,7 +5575,7 @@ GameObject:
   - component: {fileID: 4403081558568548884}
   - component: {fileID: 6698123702858602181}
   - component: {fileID: 7559571144572614516}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10471,7 +10471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173375385049502975}
   - component: {fileID: 5277967042561307099}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10517,7 +10517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2023467084471998275}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10553,7 +10553,7 @@ GameObject:
   - component: {fileID: 2381678680550275183}
   - component: {fileID: 7523317836147818882}
   - component: {fileID: 8743078507273497169}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10697,7 +10697,7 @@ GameObject:
   - component: {fileID: 6563752706280116066}
   - component: {fileID: 5498465965332494757}
   - component: {fileID: 3697662648627977025}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: kungfu_headband_0602105753_texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10782,7 +10782,7 @@ GameObject:
   - component: {fileID: 5974916836299632639}
   - component: {fileID: 155106320979978227}
   - component: {fileID: 564304282746197203}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Spine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10922,7 +10922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6423789146382468684}
   - component: {fileID: 3301144429637525386}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: char1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11031,7 +11031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4992986842743363632}
   - component: {fileID: 9135293079771843430}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11186,7 +11186,7 @@ GameObject:
   - component: {fileID: 5892721629277666925}
   - component: {fileID: 7605460692941341816}
   - component: {fileID: 243222898658043815}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11271,7 +11271,7 @@ GameObject:
   - component: {fileID: 6986115160166264241}
   - component: {fileID: 316075574552094163}
   - component: {fileID: 756938864786933991}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: leg_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11364,7 +11364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4465290016086576167}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: PartrolPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11398,7 +11398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2440602084237432616}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11430,7 +11430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4189668248600411871}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11465,7 +11465,7 @@ GameObject:
   - component: {fileID: 6540314327854191157}
   - component: {fileID: 5054412386649480320}
   - component: {fileID: 215525605867928885}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11611,7 +11611,7 @@ GameObject:
   - component: {fileID: 2549639490993153041}
   - component: {fileID: 3901064775804796816}
   - component: {fileID: 2156853707488920644}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11756,7 +11756,7 @@ GameObject:
   - component: {fileID: 2486579574608756724}
   - component: {fileID: 1204984285731084122}
   - component: {fileID: 7208595043764663765}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11897,7 +11897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647549196059057958}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: SFX_Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11929,7 +11929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2800524162032996709}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: headfront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11964,7 +11964,7 @@ GameObject:
   - component: {fileID: 304309302417261546}
   - component: {fileID: 5344726561225935987}
   - component: {fileID: 3170476553014439910}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: hand_2_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12057,7 +12057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844637684922077458}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12089,7 +12089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1075524803109774248}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -12124,7 +12124,7 @@ GameObject:
   - component: {fileID: 5792116262612049688}
   - component: {fileID: 2039133683817991685}
   - component: {fileID: 4928389260834163104}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12265,7 +12265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8797039311605660486}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12300,7 +12300,7 @@ GameObject:
   - component: {fileID: 7986052393445499235}
   - component: {fileID: 8178672073024452064}
   - component: {fileID: 3485413136179815062}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12446,7 +12446,7 @@ GameObject:
   - component: {fileID: 2964179838862866696}
   - component: {fileID: 2423355331077960529}
   - component: {fileID: 3990602261623905152}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: leg_2_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12539,7 +12539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81090376773000576}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12570,7 +12570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5500025371129343798}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -12606,7 +12606,8 @@ GameObject:
   - component: {fileID: 455514814878901972}
   - component: {fileID: 2560286941360753549}
   - component: {fileID: 7648796853820344800}
-  m_Layer: 11
+  - component: {fileID: 2558320704073442160}
+  m_Layer: 20
   m_Name: Enemy-KingRicestemborerworm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12785,6 +12786,29 @@ MonoBehaviour:
   - {fileID: 7083785593559062808}
   batteries: []
   initalBatteryScaleY: 0.15468
+--- !u!114 &2558320704073442160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646271039262532784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7884fcc147a0678499c6d107d0791bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalMaterial: {fileID: 0}
+  allMeshToFade:
+  - {fileID: 3697662648627977025}
+  allSkinMeshToFade: []
+  normalMaterials:
+  - {fileID: 2100000, guid: 884e1e78bf7b1464ca0b8bd7564a6e1d, type: 2}
+  enemySkinnedMesh: {fileID: 3301144429637525386}
+  enemyCrystals: []
+  enemyCrystalMaterial: {fileID: 2100000, guid: 03676f1800b4546489d8673516fcb044, type: 2}
+  isEnemy: 0
+  darkMaterial: {fileID: 0}
 --- !u!1 &7015975799589996521
 GameObject:
   m_ObjectHideFlags: 0
@@ -12794,7 +12818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8546155803203778381}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12826,7 +12850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7456196526061246529}
   - component: {fileID: 5220736071923712260}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12979,7 +13003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2780281769603134596}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13013,7 +13037,7 @@ GameObject:
   - component: {fileID: 4748835661147257614}
   - component: {fileID: 1881334180307828108}
   - component: {fileID: 6527440765376224093}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Healing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17912,7 +17936,7 @@ GameObject:
   - component: {fileID: 6969852434339071103}
   - component: {fileID: 6420896677423121911}
   - component: {fileID: 1315656378917341002}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18056,7 +18080,7 @@ GameObject:
   - component: {fileID: 8307252757559883186}
   - component: {fileID: 2003547833415347938}
   - component: {fileID: 2025242839904894389}
-  m_Layer: 5
+  m_Layer: 20
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18143,7 +18167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1486397485994999015}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18179,7 +18203,7 @@ GameObject:
   - component: {fileID: 5687893327656409510}
   - component: {fileID: 2267826492117526087}
   - component: {fileID: 8042936865963425611}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LadingZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23065,7 +23089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1135699445148799531}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23100,7 +23124,7 @@ GameObject:
   - component: {fileID: 1189420779103012004}
   - component: {fileID: 5495868547257319054}
   - component: {fileID: 6215225428591396496}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Ricestemborerworm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23171,7 +23195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3188435766839826659}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -23207,7 +23231,7 @@ GameObject:
   - component: {fileID: 332206934290612483}
   - component: {fileID: 5003287383123932057}
   - component: {fileID: 2977294756450495934}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Shield (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23349,7 +23373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8031660939162868959}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23384,7 +23408,7 @@ GameObject:
   - component: {fileID: 2199927744049578146}
   - component: {fileID: 3142866845253024134}
   - component: {fileID: 6645398137484977744}
-  m_Layer: 5
+  m_Layer: 20
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23484,7 +23508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6206816446842419155}
   - component: {fileID: 3207144996037590027}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

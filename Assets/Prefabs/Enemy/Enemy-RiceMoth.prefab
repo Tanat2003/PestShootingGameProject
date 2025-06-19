@@ -5018,11 +5018,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7884fcc147a0678499c6d107d0791bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMaterial: {fileID: 0}
-  darkMaterial: {fileID: 0}
-  meshRenderer: {fileID: 0}
-  skinMeshRenderer: {fileID: 726218425087280511}
-  IsEnemy: 1
+  normalMaterial: {fileID: 3758952881610933197, guid: 14ec7dbcb148d1e40a42915494249ddd, type: 3}
+  allMeshToFade:
+  - {fileID: 3958365495903236400}
+  - {fileID: 6537310838575499734}
+  - {fileID: 8109588294611933036}
+  - {fileID: 1570223479948441223}
+  - {fileID: 6881733583841168153}
+  - {fileID: 7332783382124224664}
+  allSkinMeshToFade: []
+  normalMaterials: []
+  isEnemy: 1
+  enemyCrystalMaterial: {fileID: 0}
+  enemySkinnedMesh: {fileID: 726218425087280511}
+  darkMaterial: {fileID: 2100000, guid: b8435950ab658b34abf7c1326881719f, type: 2}
 --- !u!1 &8431800160027627802
 GameObject:
   m_ObjectHideFlags: 0

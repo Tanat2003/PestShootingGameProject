@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2389123440867428954}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5853541599536968022}
   - component: {fileID: 2884618625387629948}
   - component: {fileID: 3506471073745043039}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962366612199975839}
   - component: {fileID: 3741550997011376653}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1704498364887745648}
   - component: {fileID: 1436320849859695}
   - component: {fileID: 3010412627545267929}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Distortion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5121,7 +5121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633555290860882637}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: PartrolPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5155,7 +5155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8348983993074533238}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +5188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984200403949964754}
   - component: {fileID: 8736985077821728734}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: char1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5296,7 +5296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2916124892869126038}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5328,7 +5328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6086113841442241485}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5361,7 +5361,7 @@ GameObject:
   - component: {fileID: 3887971209665437954}
   - component: {fileID: 4690323803189601524}
   - component: {fileID: 1802207274482621988}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10198,7 +10198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4678412849003212247}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: SFX_Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10232,7 +10232,7 @@ GameObject:
   - component: {fileID: 6264045416023050572}
   - component: {fileID: 347282582032618254}
   - component: {fileID: 4473960002595566028}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Point2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15121,7 +15121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7169630525969789200}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15157,7 +15157,7 @@ GameObject:
   - component: {fileID: 3162635839076743525}
   - component: {fileID: 1528473280826060805}
   - component: {fileID: 8936247929512246609}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: hand_2_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15240,7 +15240,7 @@ GameObject:
   - component: {fileID: 3612728484479506414}
   - component: {fileID: 5543457142011722608}
   - component: {fileID: 6078049224193410451}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CircleSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20078,7 +20078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6966510132384564953}
   - component: {fileID: 6640602121258909276}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Melee_Swoosh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20207,7 +20207,7 @@ GameObject:
   - component: {fileID: 7913280859364908708}
   - component: {fileID: 6305648981131562447}
   - component: {fileID: 1147923811255219000}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CircleSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25044,7 +25044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4312633196718278261}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25078,7 +25078,7 @@ GameObject:
   - component: {fileID: 2587527886866833614}
   - component: {fileID: 3966567665926900310}
   - component: {fileID: 2874997595120927798}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LadingZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29966,7 +29966,7 @@ GameObject:
   - component: {fileID: 1376972614180702575}
   - component: {fileID: 4515875192992483459}
   - component: {fileID: 1472043039742601547}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: WitchHat_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30047,7 +30047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6310499354089967820}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30079,7 +30079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8752842192208486681}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -30113,7 +30113,7 @@ GameObject:
   - component: {fileID: 985053087246579635}
   - component: {fileID: 1829979197136780323}
   - component: {fileID: 445686321313258560}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30216,7 +30216,7 @@ GameObject:
   - component: {fileID: 6144049418184029026}
   - component: {fileID: 4405025800162206858}
   - component: {fileID: 2939553551357003001}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30358,7 +30358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3973168712368893851}
   - component: {fileID: 8444935147918263965}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30511,7 +30511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8021098483301804257}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: StartThrowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30547,7 +30547,7 @@ GameObject:
   - component: {fileID: 7342623294987568866}
   - component: {fileID: 6263186304828079084}
   - component: {fileID: 8722218317300075405}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CircleSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35388,7 +35388,7 @@ GameObject:
   - component: {fileID: 7877812389458905426}
   - component: {fileID: 904035529904460118}
   - component: {fileID: 2382045119677603840}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35534,7 +35534,7 @@ GameObject:
   - component: {fileID: 3053772444868482119}
   - component: {fileID: 2249210444128462158}
   - component: {fileID: 5209769821052081774}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35668,7 +35668,7 @@ GameObject:
   - component: {fileID: 8015052907880902116}
   - component: {fileID: 2504580276301271387}
   - component: {fileID: 7381322241744184476}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Shield (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35812,7 +35812,7 @@ GameObject:
   - component: {fileID: 420118978231821380}
   - component: {fileID: 7087130164702413667}
   - component: {fileID: 5296755367904300481}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Riceweevil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35878,7 +35878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 155752459693742844}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -35909,7 +35909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7970005239619946138}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35940,7 +35940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5772481030067081272}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: headfront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35973,7 +35973,7 @@ GameObject:
   - component: {fileID: 887898021460317602}
   - component: {fileID: 2448466127882800471}
   - component: {fileID: 1936039135774793898}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Piedra abajo low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36056,7 +36056,7 @@ GameObject:
   - component: {fileID: 9171948687089832795}
   - component: {fileID: 8778510067027860277}
   - component: {fileID: 1111067957284603798}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40893,7 +40893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8794649859657911668}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -40927,7 +40927,7 @@ GameObject:
   - component: {fileID: 962118547647311400}
   - component: {fileID: 3836705533922218752}
   - component: {fileID: 2683646748115297438}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41014,7 +41014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7946467864606122491}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41050,7 +41050,7 @@ GameObject:
   - component: {fileID: 6229494912903142727}
   - component: {fileID: 947797316885944667}
   - component: {fileID: 1320656024213079360}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41192,7 +41192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158690548459574638}
   - component: {fileID: 3210642768600499822}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41347,7 +41347,7 @@ GameObject:
   - component: {fileID: 8610214758294472827}
   - component: {fileID: 1121015239612547736}
   - component: {fileID: 5946338310768303371}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: hand_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41430,7 +41430,7 @@ GameObject:
   - component: {fileID: 4605881227186284750}
   - component: {fileID: 8356266982866510578}
   - component: {fileID: 5665098226090736535}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Distortion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46320,7 +46320,7 @@ GameObject:
   - component: {fileID: 8080155052483207177}
   - component: {fileID: 1755259211081880709}
   - component: {fileID: 492204946494867377}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46462,7 +46462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2735701521221830858}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46497,7 +46497,7 @@ GameObject:
   - component: {fileID: 2621101502317919345}
   - component: {fileID: 678198440856741641}
   - component: {fileID: 2780504132270235665}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Spine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46640,7 +46640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201679492812376643}
   - component: {fileID: 8089147858694818670}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46795,7 +46795,7 @@ GameObject:
   - component: {fileID: 7236772267969970291}
   - component: {fileID: 4213837706105595083}
   - component: {fileID: 5195279397493009022}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: body_3_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46880,7 +46880,7 @@ GameObject:
   - component: {fileID: 1133097822410004829}
   - component: {fileID: 6626719471453003677}
   - component: {fileID: 1835151444044097601}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47023,7 +47023,7 @@ GameObject:
   - component: {fileID: 3199249865171515163}
   - component: {fileID: 1483548731479355183}
   - component: {fileID: 1590547850757227617}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Distortion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51911,7 +51911,7 @@ GameObject:
   - component: {fileID: 2289222622167604188}
   - component: {fileID: 4098019963721763105}
   - component: {fileID: 7240164539001508961}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51998,7 +51998,8 @@ GameObject:
   - component: {fileID: 2156073489218029040}
   - component: {fileID: 8616245135095435977}
   - component: {fileID: 7921584335053558643}
-  m_Layer: 11
+  - component: {fileID: 1110687377572064201}
+  m_Layer: 20
   m_Name: Enemy-KingRiceweevil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52177,6 +52178,29 @@ MonoBehaviour:
   - {fileID: 5404213984451730034}
   batteries: []
   initalBatteryScaleY: 0.15468
+--- !u!114 &1110687377572064201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326824775016197354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7884fcc147a0678499c6d107d0791bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalMaterial: {fileID: 0}
+  allMeshToFade:
+  - {fileID: 1472043039742601547}
+  allSkinMeshToFade: []
+  normalMaterials:
+  - {fileID: 2100000, guid: 4178c4997e93ab24eb64e03f7de102c7, type: 2}
+  enemySkinnedMesh: {fileID: 8736985077821728734}
+  enemyCrystals: []
+  enemyCrystalMaterial: {fileID: 3758952881610933197, guid: 098c2be7430782344a22caa1d8787baa, type: 3}
+  isEnemy: 0
+  darkMaterial: {fileID: 0}
 --- !u!1 &6417909609582554197
 GameObject:
   m_ObjectHideFlags: 0
@@ -52190,7 +52214,7 @@ GameObject:
   - component: {fileID: 6713578443383885727}
   - component: {fileID: 4728800585050122668}
   - component: {fileID: 7773040626460895383}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52333,7 +52357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5026865715010004431}
   - component: {fileID: 9038476957091140914}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Enemy_Melee_Weapon_Trail (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52488,7 +52512,7 @@ GameObject:
   - component: {fileID: 1051958392154562754}
   - component: {fileID: 3860052701380795785}
   - component: {fileID: 4953914476425852317}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Sphere_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52569,7 +52593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5273106975407236506}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: wooden staff final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52608,7 +52632,7 @@ GameObject:
   - component: {fileID: 7556349286818847283}
   - component: {fileID: 3404724669856515388}
   - component: {fileID: 6686338197320986626}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52751,7 +52775,7 @@ GameObject:
   - component: {fileID: 2281598968604553655}
   - component: {fileID: 2111795818936417717}
   - component: {fileID: 1789549854078404472}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57590,7 +57614,7 @@ GameObject:
   - component: {fileID: 2870533990133738639}
   - component: {fileID: 1994146263571532072}
   - component: {fileID: 27488996855255759}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Point1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62481,7 +62505,7 @@ GameObject:
   - component: {fileID: 4281980194417903803}
   - component: {fileID: 516392154881259880}
   - component: {fileID: 1332634949718243017}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Piedra arriba_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62564,7 +62588,7 @@ GameObject:
   - component: {fileID: 272990573278632492}
   - component: {fileID: 6070498103999615272}
   - component: {fileID: 1678526595391305524}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Mango low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62645,7 +62669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2783617026302535611}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: WitchHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62680,7 +62704,7 @@ GameObject:
   - component: {fileID: 8181211861462311731}
   - component: {fileID: 7071329663076387281}
   - component: {fileID: 5506600615875127120}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: body_2_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62763,7 +62787,7 @@ GameObject:
   - component: {fileID: 8470860450975592200}
   - component: {fileID: 1333324847981442667}
   - component: {fileID: 1114761915862955654}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: HealBar_Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62836,7 +62860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1976027890557445135}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62868,7 +62892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6059494147234361137}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62902,7 +62926,7 @@ GameObject:
   - component: {fileID: 549520522557685977}
   - component: {fileID: 9038538586807317500}
   - component: {fileID: 6825788936857162137}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Point3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67793,7 +67817,7 @@ GameObject:
   - component: {fileID: 3769084280165059779}
   - component: {fileID: 4183982621911580268}
   - component: {fileID: 2498081513621843492}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: body_corruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}

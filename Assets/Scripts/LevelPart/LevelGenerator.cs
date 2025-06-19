@@ -25,7 +25,7 @@ public class LevelGenerator : MonoBehaviour
 
     public List<Enemy> enemys; //‰«Èenable»—µ√Ÿ„π≈‘ µÏÀ≈—ß®“°∑’Ë √È“ßlevelPart∑ÿ°Õ—π‡ √Á®(ª‘¥Enable‰«ÈµÕπ·√°)
 
-    
+
     private Mission_Manager missionManager;
 
 
@@ -40,7 +40,7 @@ public class LevelGenerator : MonoBehaviour
 
         enemys = new List<Enemy>();
         defaultSnapPoint = nextSnapPoint;
-        
+
         missionManager = Mission_Manager.instance;
 
     }
@@ -73,7 +73,7 @@ public class LevelGenerator : MonoBehaviour
         generationOver = false;
         currentLevelParts = new List<Transform>(levelParts);
         DestroyOldLevelPart();
-        
+
     }
 
     private void DestroyOldLevelPart()
@@ -108,8 +108,12 @@ public class LevelGenerator : MonoBehaviour
 
         missionManager.StartMission();
         missionManager.SetSkyForMission();
-       
-        
+        foreach (Enemy enemy in enemys)
+        {
+            enemy.GetComponent<VisionFade>()?.SetDark(false);
+
+        }
+
 
 
     }

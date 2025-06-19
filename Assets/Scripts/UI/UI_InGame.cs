@@ -93,7 +93,8 @@ public class UI_InGame : MonoBehaviour
     private void OnEnable()
     {
 
-
+        if (GameManager.instance.player.health.currentHealth <= 0)
+            return;
         bossIcon = bossIconHolder.GetBossIcon();
         displayRoutine = StartCoroutine(ShowDialogue(1f));
     }
@@ -149,8 +150,12 @@ public class UI_InGame : MonoBehaviour
 
 
         }
-
-
+        foreach (Enemy enemy in LevelGenerator.Instance.GetEnemyList())
+        {
+            enemy.GetComponent<VisionFade>()?.SetDark(true);
+            
+        }
+        yield return null;
 
         StopEnemyDisplay();
 
@@ -163,6 +168,7 @@ public class UI_InGame : MonoBehaviour
     }
     private void StopEnemyDisplay()
     {
+
 
         if (displayRoutine != null)
         {
@@ -180,6 +186,7 @@ public class UI_InGame : MonoBehaviour
         SetDialog
             (Mission_Manager.instance.currentMission.dialogBoss,
                 Mission_Manager.instance.currentMission.dialogPlayerWithBoss, DialogueWith.Boss);
+        
     }
 
 
@@ -428,6 +435,8 @@ public class UI_InGame : MonoBehaviour
     }
     public void DisplayDamageScreen(float timeToDisplay)
     {
+        if (GameManager.instance.player.health.currentHealth <=0)
+            return;
         displayRoutine = StartCoroutine(DisplayDamageScreenCo(timeToDisplay));
     }
     #endregion

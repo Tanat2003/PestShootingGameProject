@@ -4735,6 +4735,7 @@ GameObject:
   - component: {fileID: 3403136367145715095}
   - component: {fileID: 5134887978987136957}
   - component: {fileID: 4703948186399650289}
+  - component: {fileID: 524440032612520179}
   m_Layer: 0
   m_Name: Enemy-Riceweevil
   m_TagString: Untagged
@@ -4775,6 +4776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 150
   currentHealth: 0
+  minHealthToHealth: 0
 --- !u!195 &4429002374789086208
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4893,6 +4895,31 @@ MonoBehaviour:
   ragdollParent: {fileID: 8899559181691260244}
   ragdollColider: []
   ragdollRigibody: []
+--- !u!114 &524440032612520179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868062004139213581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7884fcc147a0678499c6d107d0791bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalMaterial: {fileID: 3758952881610933197, guid: 14ec7dbcb148d1e40a42915494249ddd, type: 3}
+  allMeshToFade:
+  - {fileID: 3859102021826660338}
+  - {fileID: 284657789026794454}
+  - {fileID: 1826313518492509789}
+  - {fileID: 7733767130426091304}
+  - {fileID: 3626355936899405325}
+  allSkinMeshToFade: []
+  normalMaterials: []
+  isEnemy: 1
+  enemyCrystalMaterial: {fileID: 0}
+  enemySkinnedMesh: {fileID: 8770149828226662474}
+  darkMaterial: {fileID: 2100000, guid: b8435950ab658b34abf7c1326881719f, type: 2}
 --- !u!1 &8925170791203104595
 GameObject:
   m_ObjectHideFlags: 0

@@ -1533,6 +1533,7 @@ GameObject:
   - component: {fileID: 6772137807217865571}
   - component: {fileID: 1044223975129654616}
   - component: {fileID: 4128170328151237867}
+  - component: {fileID: 8586264296752239361}
   m_Layer: 11
   m_Name: Enemy-Planthopper
   m_TagString: Untagged
@@ -1573,6 +1574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 150
   currentHealth: 0
+  minHealthToHealth: 0
 --- !u!195 &7808785768297855131
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1633,7 +1635,7 @@ MonoBehaviour:
   ammoDrop: {fileID: 6587098119908349184, guid: 112d348e209454941a4c4be6204c8216, type: 3}
   healthBox: {fileID: 6496170753142644547, guid: 8256c6d44116f81488a7d958308d0809, type: 3}
   orbDrop: {fileID: 4073030350372186662, guid: 8de30bb097b53994ba6bae71559e3a5a, type: 3}
-  healthBar: {fileID: 5279924667186727459}
+  healthBar: {fileID: 5872165903389925935}
   meleeType: 2
   dodgeCooldown: 0
   lastTimeDodge: 0
@@ -1688,6 +1690,31 @@ MonoBehaviour:
   ragdollParent: {fileID: 5731130446816313760}
   ragdollColider: []
   ragdollRigibody: []
+--- !u!114 &8586264296752239361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124404263187030023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7884fcc147a0678499c6d107d0791bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalMaterial: {fileID: 3758952881610933197, guid: 14ec7dbcb148d1e40a42915494249ddd, type: 3}
+  allMeshToFade:
+  - {fileID: 3623532969883813495}
+  - {fileID: 1647726137498961485}
+  - {fileID: 665371703088252021}
+  - {fileID: 5277970595700912069}
+  - {fileID: 3214900296205471716}
+  allSkinMeshToFade: []
+  normalMaterials: []
+  isEnemy: 1
+  enemyCrystalMaterial: {fileID: 0}
+  enemySkinnedMesh: {fileID: 1980074978164996084}
+  darkMaterial: {fileID: 2100000, guid: b8435950ab658b34abf7c1326881719f, type: 2}
 --- !u!1 &3245948766782844512
 GameObject:
   m_ObjectHideFlags: 0
